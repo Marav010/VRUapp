@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 export default function Receipt() {
     const navigation = useNavigation();
     return (
+        <ScrollView>
         <View>
             <View style={{ padding: 10, marginHorizontal: 20, backgroundColor: 'white', alignItems: 'center', borderColor: 'gray' }}>
                 {/* ก้อนที่ 1 */}
@@ -74,7 +75,7 @@ export default function Receipt() {
                 <View style={{ borderBottomWidth: 1, padding: 10 }}>
                     <Text style={{ fontSize: 13, color: 'black' }}>มหาวิทยาลัย</Text>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                        <FontAwesome name='building-columns' size={50} color="orange" />
+                        <FontAwesome name='building' size={50} color="orange" />
                         <Text style={{ fontSize: 20, color: 'black', marginLeft: 20 }}>วไลยอลงกรณ์</Text>
                     </View>
 
@@ -88,5 +89,6 @@ export default function Receipt() {
                 </TouchableOpacity>
             </View>
         </View>
+        </ScrollView>
     );
 }

@@ -12,26 +12,26 @@ const Stack = createStackNavigator();
 
 export default function VruMenu() {
     return (
-        <Stack.Navigator initialRouteName="HomeMenu">
-            <Stack.Screen
-                name="HomeMenu"
-                component={HomeMenu}
-                options={{ title: " Home" }}
-            />
-            <Stack.Screen
-                name="Checkmenu"
-                component={Checkmenu}
-                options={{ title: " 1" }}
-            />
-            <Stack.Screen
-                name="Myprofile"
-                component={Myprofile}
-                options={{ title: " 2   " }}
-            />
+        <Stack.Navigator initialRouteName="VRU">
             <Stack.Screen
                 name="VRU"
                 component={VRU}
                 options={{ title: " sign up" }}
+            />
+            <Stack.Screen
+                name="HomeMenu"
+                component={HomeMenu}
+                options={{ title: " VRU_Home" }}
+            />
+            <Stack.Screen
+                name="Checkmenu"
+                component={Checkmenu}
+                options={{ title: "Check class" }}
+            />
+            <Stack.Screen
+                name="Myprofile"
+                component={Myprofile}
+                options={{ title: "Profile" }}
             />
             <Stack.Screen
                 name="Menumix"
